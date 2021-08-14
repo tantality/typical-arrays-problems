@@ -1,12 +1,9 @@
+let isEmpty=(array) => array===undefined || array.length==0;
 
-exports.min = function min (array) {
-  return 0;
-}
+exports.min = (array) => isEmpty(array) ? 0 : Math.min(...array);
 
-exports.max = function max (array) {
-  return 0;
-}
+exports.max = (array) => isEmpty(array) ? 0 : Math.max(...array);
 
-exports.avg = function avg (array) {
-  return 0;
-}
+exports.avg = (array) => isEmpty(array) ? 0 : array.reduce((a,b)=>a+b)/array.length;
+
+
